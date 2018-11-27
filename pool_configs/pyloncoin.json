@@ -1,0 +1,83 @@
+{
+    "enabled": true,
+    "coin": "pylon.json",
+
+    "auxes": [  ],
+    "address": "PR1xHxdKTrZyB4Y7E6UoawcpNWUHkry3Dd", //pool address
+
+    "rewardRecipients": {
+        "PU4wdRJSLFdzQ3qXfXtdjRR7vN3k6oWRMf": 1.5, //fees address
+        "PX3TvDC6hsGgtJwF1iqKRT1HbE6Z58yNVA": 1.5  //co-owner fees
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 600,
+        "minimumPayment": 0.01,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 14782,
+            "user": "pylon",
+            "password": "coin"
+        }
+    },
+
+    "ports": {
+        "8140": {
+            "diff": 8
+        },
+        "8150": {
+            "diff": 256,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 18192,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "8160": {
+            "diff": 18192
+        },
+
+        "8170": {
+            "diff": 32768
+        },
+
+        "8180": {
+            "diff": 65536
+        },
+
+        "8190": {
+            "diff": 131072
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 14782,
+            "user": "pylon",
+            "password": "coin"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 19333,
+        "disableTransactions": false
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": false,
+        "autoCreateWorker": false
+    }
+
+}
